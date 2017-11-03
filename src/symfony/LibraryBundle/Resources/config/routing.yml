@@ -1,0 +1,3 @@
+symfony_library_homepage:
+    path:     /
+    defaults: { _controller: symfonyLibraryBundle:Default:index }

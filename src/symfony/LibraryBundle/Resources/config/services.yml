@@ -1,0 +1,4 @@
+services:
+#    symfony_library.example:
+#        class: symfony\LibraryBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
