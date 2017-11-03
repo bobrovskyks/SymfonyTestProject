@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Libraries list</h1>
+    <h1>Books list</h1>
 
     <table>
         <thead>
@@ -38,6 +38,11 @@
     <ul>
         <li>
             <a href="{{ path('library_new') }}">Create a new library</a>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="{{ path('library_index') }}">Search book</a>
         </li>
     </ul>
 {% endblock %}
