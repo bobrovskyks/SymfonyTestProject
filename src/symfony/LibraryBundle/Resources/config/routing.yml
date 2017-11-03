@@ -1,3 +1,7 @@
+symfony_library_library:
+    resource: "@symfonyLibraryBundle/Resources/config/routing/library.yml"
+    prefix:   /library
+
 symfony_library_homepage:
     path:     /
     defaults: { _controller: symfonyLibraryBundle:Default:index }

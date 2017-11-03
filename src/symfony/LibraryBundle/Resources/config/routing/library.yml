@@ -1,0 +1,24 @@
+library_index:
+    path:     /
+    defaults: { _controller: "symfonyLibraryBundle:Library:index" }
+    methods:  GET
+
+library_show:
+    path:     /{id}/show
+    defaults: { _controller: "symfonyLibraryBundle:Library:show" }
+    methods:  GET
+
+library_new:
+    path:     /new
+    defaults: { _controller: "symfonyLibraryBundle:Library:new" }
+    methods:  [GET, POST]
+
+library_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "symfonyLibraryBundle:Library:edit" }
+    methods:  [GET, POST]
+
+library_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "symfonyLibraryBundle:Library:delete" }
+    methods:  DELETE

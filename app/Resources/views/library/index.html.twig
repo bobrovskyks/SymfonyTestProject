@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Libraries list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for library in libraries %}
+            <tr>
+                <td><a href="{{ path('library_show', { 'id': library.id }) }}">{{ library.id }}</a></td>
+                <td>{{ library.title }}</td>
+                <td>{{ library.author }}</td>
+                <td>{{ library.genre }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('library_show', { 'id': library.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('library_edit', { 'id': library.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('library_new') }}">Create a new library</a>
+        </li>
+    </ul>
+{% endblock %}
