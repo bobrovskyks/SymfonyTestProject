@@ -37,7 +37,7 @@ class LibraryController extends Controller
         $form = $this->createForm('symfony\LibraryBundle\Form\LibraryType', $library);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($library);
             $em->flush();
